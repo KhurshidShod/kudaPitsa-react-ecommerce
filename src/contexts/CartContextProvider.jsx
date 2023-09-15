@@ -1,24 +1,24 @@
-import { createContext, useState } from 'react'
-import PropTypes from "prop-types";
+// import { createContext, useState } from 'react'
+// import PropTypes from "prop-types";
 
 
-export const CartContext = createContext()
+// export const CartContext = createContext()
 
-const CartContextProvider = ({ children }) => {
-  const cartJson = localStorage.getItem("cart");
-  const [cart, setCart] = useState(JSON.parse(cartJson) || []);
+// const CartContextProvider = ({ children }) => {
+//   const cartJson = localStorage.getItem("cart");
+//   const [cart, setCart] = useState(JSON.parse(cartJson) || []);
 
-  const state = {cart, setCart};
+//   const state = {cart, setCart};
 
-  return (
-    <CartContextProvider value={state}>
-      {children}
-    </CartContextProvider>
-  )
-}
+//   return (
+//     <CartContextProvider value={state}>
+//       {children}
+//     </CartContextProvider>
+//   )
+// }
 
-CartContextProvider.propTypes = {
-  children: PropTypes.node,
-};
+// CartContextProvider.propTypes = {
+//   children: PropTypes.node,
+// };
 
-export default CartContextProvider
+// export default CartContextProvider
