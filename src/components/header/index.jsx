@@ -6,22 +6,21 @@ import Button from "../button";
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ThemeContext } from "../../contexts/ThemeContextProvider";
+import { ThemeContext } from "../../context/ThemeContextProvider";
 
 const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const { t, i18n } = useTranslation();
   const [navOpen, setNavOpen] = useState(false);
-  const [cartFixed, setCartFixed] = useState(false)
+  const [cartFixed, setCartFixed] = useState(false);
   const changeLang = (e) => {
     i18n.changeLanguage(e.target.value);
-    localStorage.setItem('lang', e.target.value)
-    console.log(e.target.value);
+    localStorage.setItem("lang", e.target.value);
   };
-  if(theme === 'dark'){
-    document.body.classList.add('dark')
+  if (theme === "dark") {
+    document.body.classList.add("dark");
   } else {
-    document.body.classList.remove('dark')
+    document.body.classList.remove("dark");
   }
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -50,7 +49,7 @@ const Header = () => {
               <select
                 name=""
                 id=""
-                defaultValue={localStorage.getItem('lang')}
+                defaultValue={localStorage.getItem("lang")}
                 onChange={(e) => changeLang(e)}
               >
                 <option value="uz">Uz</option>
@@ -66,8 +65,11 @@ const Header = () => {
               className={`${styles.nav__menu} ${navOpen ? styles.open : null}`}
             >
               <div>
-                <button >
-                  <CgDarkMode onClick={changeTheme} color="var(--color-orange)" />
+                <button>
+                  <CgDarkMode
+                    onClick={changeTheme}
+                    color="var(--color-orange)"
+                  />
                 </button>
               </div>
               <ul>
@@ -110,9 +112,14 @@ const Header = () => {
         </div>
         <span></span>
         <div className="container">
-          <div className={`${styles.navBottom} ${cartFixed ? styles.cartBtm : null}`}>
+          <div
+            className={`${styles.navBottom} ${
+              cartFixed ? styles.cartBtm : null
+            }`}
+          >
             <NavLink href="" className={styles.logo}>
-              <img src={Logo} alt="" />Куда пицца
+              <img src={Logo} alt="" />
+              Куда пицца
             </NavLink>
             <input
               type="checkbox"

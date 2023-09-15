@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import styles from "./Card.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Card = ({ prod }) => {
+  const {t, i18n} = useTranslation()
   return (
     <div className={styles.category__wrapper_cards_card}>
       <div className={styles.category__wrapper_cards_card_img}>
@@ -17,7 +19,7 @@ const Card = ({ prod }) => {
         <div>
           <Button padding={"13px 32px"} br={"6px"} fontSize={"16px"}>
             <p>{prod.price} ₽</p>
-            <span>Выбрать</span>
+            <span>{t("Tanla")}</span>
           </Button>
         </div>
       </div>

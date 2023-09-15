@@ -12,8 +12,9 @@ import CategoryWrapper from "../../components/categoryWrapper";
 import CategoryCards from "../../components/categoryCards";
 import { products } from "../../assets/data/products";
 import Card from "../../components/card";
-import NoProd from "../../assets/images/no-product.png";
-import { TbSend } from 'react-icons/tb'
+import NoProd from "../../assets/images/no-product.webp";
+import { TbSend } from "react-icons/tb";
+import LoaderPage from "../../components/loader";
 
 const HomePage = () => {
   const [t, i18n] = useTranslation();
@@ -56,7 +57,9 @@ const HomePage = () => {
               </div>
               <Button br={"6px"} padding={"12px 32px"} fontSize={"16px"}>
                 <p>{t("Check")}</p>
-                <span><TbSend size={25} /></span>
+                <span>
+                  <TbSend size={25} />
+                </span>
               </Button>
             </div>
           </div>
@@ -73,9 +76,22 @@ const HomePage = () => {
                   .filter((prod) => prod.category === cat.name)
                   .map((prod) => <Card prod={prod} key={prod.id} />)
               ) : (
-                <div style={{ width: "100%", maxHeight: "500px" }}>
+                <div
+                  style={{
+                    width: "100%",
+                    maxHeight: "500px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
                   <img
-                    style={{ width: "100%", height: "100%" }}
+                    style={{
+                      width: "100%",
+                      maxWidth: "750px",
+                      height: "100%",
+                      maxHeight: "300px",
+                    }}
                     src={NoProd}
                     alt=""
                   />

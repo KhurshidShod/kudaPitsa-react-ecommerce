@@ -161,7 +161,7 @@ export const products = [
     filter: "New",
     image: "/images/products/sushi/sushi-img-1.png",
     name: "Филадельфия кранч",
-    desc: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...",
+    description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...",
     price: "475 ₽",
   },
   {
@@ -170,7 +170,7 @@ export const products = [
     filter: "Xit",
     image: "/images/products/sushi/sushi-img-2.png",
     name: "Филадельфия крем-брюле",
-    desc: "Сливочный сыр, семга татаки с тростниковым сахаром, соус у...",
+    description: "Сливочный сыр, семга татаки с тростниковым сахаром, соус у...",
     price: "395 ₽",
   },
   {
@@ -179,7 +179,7 @@ export const products = [
     filter: "",
     image: "/images/products/sushi/sushi-img-3.png",
     name: "Супер Филадельфия",
-    desc: "Действительно много семги, сливочный сыр, огурец, рис, н...",
+    description: "Действительно много семги, сливочный сыр, огурец, рис, н...",
     price: "425 ₽",
   },
   {
@@ -188,7 +188,7 @@ export const products = [
     filter: "",
     image: "/images/products/sushi/sushi-img-4.png",
     name: "Тигр мама",
-    desc: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
+    description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
     price: "525 ₽",
   },
   {
@@ -197,7 +197,7 @@ export const products = [
     filter: "",
     image: "/images/products/sushi/sushi-img-5.png",
     name: "Тигр мама",
-    desc: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
+    description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
     price: "525 ₽",
   },
   {
@@ -206,7 +206,7 @@ export const products = [
     filter: "",
     image: "/images/products/sushi/sushi-img-6.png",
     name: "Супер Филадельфия",
-    desc: "Действительно много семги, сливочный сыр, огурец, рис, н...",
+    description: "Действительно много семги, сливочный сыр, огурец, рис, н...",
     price: "425 ₽",
   },
   {
@@ -215,7 +215,7 @@ export const products = [
     filter: "",
     image: "/images/products/sushi/sushi-img-7.png",
     name: "Филадельфия кранч",
-    desc: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...",
+    description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...",
     price: "475 ₽",
   },
   {
@@ -224,7 +224,7 @@ export const products = [
     filter: "",
     image: "/images/products/sushi/sushi-img-8.png",
     name: "Филадельфия крем-брюле",
-    desc: "Сливочный сыр, семга татаки с тростниковым сахаром, соус у...",
+    description: "Сливочный сыр, семга татаки с тростниковым сахаром, соус у...",
     price: "395 ₽",
   },
   {

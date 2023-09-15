@@ -1,5 +1,5 @@
 {
-    "Aksiya": "Aksiya",
+    "Aksiya": "Chegirmalar",
     "Pitsa": "Pitsa",
     "Sushi": "Sushi",
     "Napitka": "Ichimliklar",
@@ -16,5 +16,6 @@
     },
     "checkAdd": "Yetkazib berish manzilini tekshiring",
     "Address": "Manzil",
-    "Check": "Tekshirish"
+    "Check": "Tekshirish",
+    "Tanla": "Tanlash"
 }
