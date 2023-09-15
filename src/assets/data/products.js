@@ -74,7 +74,7 @@ export const products = [
   {
     id: "combo-1",
     category: "Комбо",
-    fillter: "",
+    filter: "",
     image: "/images/products/combos/combo-img-1.png",
     name: "Филадельфия кранч",
     description:
@@ -85,7 +85,7 @@ export const products = [
   {
     id: "combo-2",
     category: "Комбо",
-    fillter: "",
+    filter: "",
     image: "/images/products/combos/combo-img-2.png",
     name: "Филадельфия крем-брюле",
     description:
@@ -96,7 +96,7 @@ export const products = [
   {
     id: "combo-3",
     category: "Комбо",
-    fillter: "",
+    filter: "",
     image: "/images/products/combos/combo-img-3.png",
     name: "Супер Филадельфия",
     description: "Действительно много семги, сливочный сыр, огурец, рис, н...",
@@ -106,7 +106,7 @@ export const products = [
   {
     id: "combo-4",
     category: "Комбо",
-    fillter: "",
+    filter: "",
     image: "/images/products/combos/combo-img-4.png",
     name: "Тигр мама",
     description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
@@ -116,7 +116,7 @@ export const products = [
   {
     id: "combo-5",
     category: "Комбо",
-    fillter: "",
+    filter: "",
     image: "/images/products/combos/combo-img-5.png",
     name: "Филадельфия крем-брюле",
     description:
@@ -127,7 +127,7 @@ export const products = [
   {
     id: "combo-6",
     category: "Комбо",
-    fillter: "",
+    filter: "",
     image: "/images/products/combos/combo-img-6.png",
     name: "Филадельфия кранч",
     description:
@@ -138,7 +138,7 @@ export const products = [
   {
     id: "combo-7",
     category: "Комбо",
-    fillter: "",
+    filter: "",
     image: "/images/products/combos/combo-img-7.png",
     name: "Тигр мама",
     description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
@@ -148,7 +148,7 @@ export const products = [
   {
     id: "combo-8",
     category: "Комбо",
-    fillter: "",
+    filter: "",
     image: "/images/products/combos/combo-img-8.png",
     name: "Супер Филадельфия",
     description: "Действительно много семги, сливочный сыр, огурец, рис, н...",

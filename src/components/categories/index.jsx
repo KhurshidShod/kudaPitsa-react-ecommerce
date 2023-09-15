@@ -43,7 +43,7 @@ const Categories = () => {
               duration={500}
               className={styles.category}
             >
-              <BsFire size={25} />
+              <BsFire size={30} />
               <p>{t("Aksiya")}</p>
             </Link>
             <Link
@@ -55,7 +55,7 @@ const Categories = () => {
               duration={500}
               className={styles.category}
             >
-              <GiFullPizza size={25} />
+              <GiFullPizza size={30} />
               <p>{t("Pitsa")}</p>
             </Link>
             <Link
@@ -67,7 +67,7 @@ const Categories = () => {
               duration={500}
               className={styles.category}
             >
-              <IoFastFood size={25} />
+              <IoFastFood size={30} />
               <p>{t("Kombo")}</p>
             </Link>
             <Link
@@ -79,7 +79,7 @@ const Categories = () => {
               duration={500}
               className={styles.category}
             >
-              <GiSushis size={25} />
+              <GiSushis size={30} />
               <p>{t("Sushi")}</p>
             </Link>
             <Link
@@ -91,7 +91,7 @@ const Categories = () => {
               duration={500}
               className={styles.category}
             >
-              <GiDrinkMe size={25} />
+              <GiDrinkMe size={30} />
               <p>{t("Sous")}</p>
             </Link>
             <Link
@@ -103,7 +103,7 @@ const Categories = () => {
               duration={500}
               className={styles.category}
             >
-              <GiWrappedSweet size={25} />
+              <GiWrappedSweet size={30} />
               <p>{t("Desert")}</p>
             </Link>
             <Link
@@ -115,7 +115,7 @@ const Categories = () => {
               duration={500}
               className={styles.category}
             >
-              <BiSolidDrink size={25} />
+              <BiSolidDrink size={30} />
               <p>{t("Napitka")}</p>
             </Link>
             <Link
@@ -127,7 +127,7 @@ const Categories = () => {
               duration={500}
               className={styles.category}
             >
-              <FaBowlFood size={25} />
+              <FaBowlFood size={30} />
               <p>{t("Snek")}</p>
             </Link>
           </div>

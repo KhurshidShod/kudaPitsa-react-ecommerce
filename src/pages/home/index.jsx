@@ -12,7 +12,8 @@ import CategoryWrapper from "../../components/categoryWrapper";
 import CategoryCards from "../../components/categoryCards";
 import { products } from "../../assets/data/products";
 import Card from "../../components/card";
-import NoProd from '../../assets/images/no-product.png'
+import NoProd from "../../assets/images/no-product.png";
+import { TbSend } from 'react-icons/tb'
 
 const HomePage = () => {
   const [t, i18n] = useTranslation();
@@ -50,11 +51,14 @@ const HomePage = () => {
           <div className={styles.addressSearch__wrapper}>
             <p>{t("checkAdd")}</p>
             <div>
-              <input type="text" name="" id="" placeholder={t("Address")} />
+              <div>
+                <input type="text" name="" id="" placeholder={t("Address")} />
+              </div>
+              <Button br={"6px"} padding={"12px 32px"} fontSize={"16px"}>
+                <p>{t("Check")}</p>
+                <span><TbSend size={25} /></span>
+              </Button>
             </div>
-            <Button br={"6px"} padding={"12px 32px"} fontSize={"16px"}>
-              <p>{t("Check")}</p>
-            </Button>
           </div>
         </div>
       </section>
@@ -64,14 +68,19 @@ const HomePage = () => {
           <CategoryWrapper>
             <Category category={cat.name} />
             <CategoryCards>
-              {products
-                .filter((prod) => prod.category === cat.name).length ? products
-                .filter((prod) => prod.category === cat.name)
-                .map((prod) => (
-                  <Card prod={prod} key={prod.id} />
-                )) : <div style={{width: '100%', maxHeight: '500px'}}>
-                    <img style={{width: '100%', height: '100%'}} src={NoProd} alt="" />
-                  </div>}
+              {products.filter((prod) => prod.category === cat.name).length ? (
+                products
+                  .filter((prod) => prod.category === cat.name)
+                  .map((prod) => <Card prod={prod} key={prod.id} />)
+              ) : (
+                <div style={{ width: "100%", maxHeight: "500px" }}>
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={NoProd}
+                    alt=""
+                  />
+                </div>
+              )}
             </CategoryCards>
           </CategoryWrapper>
         </Element>

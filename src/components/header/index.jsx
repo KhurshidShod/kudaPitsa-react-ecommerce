@@ -3,7 +3,7 @@ import { CgDarkMode } from "react-icons/cg";
 import Logo from "../../assets/images/logo.svg";
 import { FaShoppingCart } from "react-icons/fa";
 import Button from "../button";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../contexts/ThemeContextProvider";
@@ -12,8 +12,10 @@ const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const { t, i18n } = useTranslation();
   const [navOpen, setNavOpen] = useState(false);
+  const [cartFixed, setCartFixed] = useState(false)
   const changeLang = (e) => {
     i18n.changeLanguage(e.target.value);
+    localStorage.setItem('lang', e.target.value)
     console.log(e.target.value);
   };
   if(theme === 'dark'){
@@ -21,6 +23,15 @@ const Header = () => {
   } else {
     document.body.classList.remove('dark')
   }
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 115) {
+        setCartFixed(true);
+      } else {
+        setCartFixed(false);
+      }
+    });
+  });
 
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -39,7 +50,7 @@ const Header = () => {
               <select
                 name=""
                 id=""
-                defaultValue={"uz"}
+                defaultValue={localStorage.getItem('lang')}
                 onChange={(e) => changeLang(e)}
               >
                 <option value="uz">Uz</option>
@@ -99,7 +110,7 @@ const Header = () => {
         </div>
         <span></span>
         <div className="container">
-          <div className={styles.navBottom}>
+          <div className={`${styles.navBottom} ${cartFixed ? styles.cartBtm : null}`}>
             <NavLink href="" className={styles.logo}>
               <img src={Logo} alt="" />Куда пицца
             </NavLink>

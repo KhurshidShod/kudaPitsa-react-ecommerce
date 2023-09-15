@@ -1,6 +1,6 @@
 .discounts {
   width: 100%;
-  font-family: 'Mulish';
+  font-family: "Mulish";
   padding-bottom: 3rem;
   &__wrapper {
     width: 100%;
@@ -23,6 +23,10 @@
       flex-direction: row;
       flex-wrap: wrap;
       gap: 30px;
+      @media (max-width: 570px) {
+        min-width: 1200px;
+        gap: 1rem;
+      }
       .discount {
         width: 280px;
         height: 320px;
@@ -41,7 +45,7 @@
           font-size: 20px;
           font-weight: 600;
           line-height: 28px;
-         color: var(--color-white);
+          color: var(--color-white);
           max-width: 240px;
         }
         img {
@@ -51,55 +55,88 @@
           background-color: var(--color-orange);
         }
         &:nth-child(even) {
-            gap: 3rem;
-            h1{
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-            img{
-                width: 278px;
-            }
-            align-items: start;
+          gap: 3rem;
+          h1 {
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
+          img {
+            width: 278px;
+          }
+          align-items: start;
           background-color: var(--color-red);
         }
       }
     }
   }
 }
-.addressSearch{
+.addressSearch {
+  width: 100%;
+  &__wrapper {
     width: 100%;
-    &__wrapper{
-        width: 100%;
-        padding: 1rem 2rem;
-        background-color: var(--bgcolor-white);
-        color: var(--fontColor-black);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        border-radius: 8px;
-        border: 1px solid var(--color-border);
-        @media (max-width: 550px) {
-            padding: 1rem;
-        }
-        div{
-            input{
-                width: 100%;
-                padding-left: 0.5rem;
-                border-radius: 6px;
-                height: 48px;
-                border: 1px solid var(--color-border);
-                font-size: 16px;
-                font-weight: 400;
-                background-color: var(--bgcolor-white);
-                min-width: 250px;
-                color: var(--fontColor-black);
-                &::placeholder{
-                    font-family: 'Mulish';
-                }
-            }
-            flex-grow: 1;
-        }
+    padding: 1rem 2rem;
+    background-color: var(--bgcolor-white);
+    color: var(--fontColor-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    @media (max-width: 550px) {
+      padding: 1rem;
     }
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      flex-grow: 1;
+      @media (max-width: 550px) {
+        gap: 0;
+        flex-wrap: nowrap;
+      }
+      div {
+        input {
+          width: 100%;
+          padding-left: 0.5rem;
+          border-radius: 6px;
+          height: 48px;
+          border: 1px solid var(--color-border);
+          font-size: 16px;
+          font-weight: 400;
+          background-color: var(--bgcolor-white);
+          color: var(--fontColor-black);
+          &::placeholder {
+            font-family: "Mulish";
+          }
+          @media (max-width: 550px) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        flex-grow: 1;
+      }
+      button {
+        @media (max-width: 550px) {
+          width: 48px !important;
+          height: 48px !important;
+          padding: 0 !important;
+          border-top-left-radius: 0 !important;
+          border-bottom-left-radius: 0 !important;
+        }
+        p {
+          @media (max-width: 550px) {
+            display: none;
+          }
+        }
+        span {
+          display: none;
+          @media (max-width: 550px) {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
 }
