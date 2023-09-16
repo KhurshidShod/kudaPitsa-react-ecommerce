@@ -99,6 +99,7 @@
         color: white !important;
         span{
           display: none;
+          pointer-events: none;
           color: var(--color-orange);
           @media (max-width: 570px) {
             display: flex;
