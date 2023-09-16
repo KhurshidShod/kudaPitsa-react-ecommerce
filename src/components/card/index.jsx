@@ -1,17 +1,15 @@
-import Button from "../button";
 import PropTypes from "prop-types";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import styles from "./Card.module.scss";
 import { useTranslation } from "react-i18next";
-import { createElement, useContext, useRef } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../context/CartContextProvider";
 import { products } from "../../assets/data/products";
 
 const Card = ({ prod }) => {
   const { t, i18n } = useTranslation();
   const { cart, setCart } = useContext(CartContext);
-  const cartBtnRef = useRef()
   const addToCart = (id) => {
     const prod = products.find((prod) => prod.id === id);
     let newProds = [];
@@ -39,7 +37,7 @@ const Card = ({ prod }) => {
     flyingImg.classList.add('flyingImage')
     parent.appendChild(flyingImg)
     parent.style.position = 'relative'
-    parent.parentNode.parentNode.parentNode.parentNode.style.overflow = 'hidden'
+    parent.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.style.overflow = 'hidden'
     
     const flyingImgPos = flyingImg.getBoundingClientRect()
     const cartBtnPos = document.querySelector('.cartBtn').getBoundingClientRect()
