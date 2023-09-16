@@ -54,7 +54,7 @@ const Card = ({ prod }) => {
     console.log(data.top)
     setTimeout(() => {
       flyingImg.style.display = 'none'
-    }, 1500);
+    }, 1490);
   }
   return (
     <div className={styles.category__wrapper_cards_card}>
