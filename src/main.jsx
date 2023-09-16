@@ -6,15 +6,15 @@ import ThemeContextProvider from "./context/ThemeContextProvider.jsx";
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 import LoaderPage from "./components/loader/index.jsx";
-// import CartContextProvider from "./context/CartContextProvider.jsx";
+import CartContextProvider from "./context/CartContextProvider.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Suspense fallback={<LoaderPage />}>
-      {/* <CartContextProvider> */}
+      <CartContextProvider>
       <ThemeContextProvider>
         <App />
       </ThemeContextProvider>
-      {/* </CartContextProvider> */}
+      </CartContextProvider>
     </Suspense>
   </React.StrictMode>
 );

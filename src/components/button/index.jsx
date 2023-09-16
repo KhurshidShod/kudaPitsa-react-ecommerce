@@ -14,7 +14,7 @@ const Button = ({ padding, br, children, fontSize  }) => {
         borderRadius: br,
         fontSize: fontSize,
         cursor: 'pointer',
-        transition: '.1s linear'
+        transition: '.1s linear',
     }
   return (
     <button style={styles} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>

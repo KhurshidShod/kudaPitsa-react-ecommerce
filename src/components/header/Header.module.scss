@@ -158,6 +158,9 @@ header {
           cursor: pointer;
           div {
             p {
+              &:nth-child(2){
+                display: none;
+              }
               &:first-child {
                 position: absolute;
                 background-color: var(--bgcolor-white);
@@ -181,6 +184,11 @@ header {
         }
       }
       button {
+        p{
+          &:nth-child(1){
+            display: none;
+          }
+        }
         div {
           display: flex;
           gap: 3px;

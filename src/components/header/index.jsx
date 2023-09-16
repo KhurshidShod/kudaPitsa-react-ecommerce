@@ -7,12 +7,17 @@ import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../context/ThemeContextProvider";
+import { CartContext } from "../../context/CartContextProvider";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
 const Header = () => {
+  const { cart, setCart } = useContext(CartContext);
   const { theme, setTheme } = useContext(ThemeContext);
   const { t, i18n } = useTranslation();
   const [navOpen, setNavOpen] = useState(false);
   const [cartFixed, setCartFixed] = useState(false);
+  let allPrice = 0;
+  cart.map((el) => (allPrice += el.price * el.qty));
   const changeLang = (e) => {
     i18n.changeLanguage(e.target.value);
     localStorage.setItem("lang", e.target.value);
@@ -49,7 +54,7 @@ const Header = () => {
               <select
                 name=""
                 id=""
-                defaultValue={localStorage.getItem("lang")}
+                defaultValue={localStorage.getItem("i18nextLng").slice(0, 2)}
                 onChange={(e) => changeLang(e)}
               >
                 <option value="uz">Uz</option>
@@ -65,11 +70,12 @@ const Header = () => {
               className={`${styles.nav__menu} ${navOpen ? styles.open : null}`}
             >
               <div>
-                <button>
-                  <CgDarkMode
-                    onClick={changeTheme}
-                    color="var(--color-orange)"
-                  />
+                <button onClick={changeTheme}>
+                  {theme === "dark" ? (
+                    <BsFillMoonStarsFill color="var(--color-orange)" />
+                  ) : (
+                    <BsFillSunFill color="var(--color-orange)" />
+                  )}
                 </button>
               </div>
               <ul>
@@ -105,7 +111,11 @@ const Header = () => {
                 <b>: 11:00 до 23:00</b>
               </p>
               <button onClick={changeTheme}>
-                <CgDarkMode color="var(--color-orange)" />
+                {theme === "dark" ? (
+                  <BsFillMoonStarsFill color="var(--color-orange)" />
+                ) : (
+                  <BsFillSunFill color="var(--color-orange)" />
+                )}
               </button>
             </div>
           </div>
@@ -133,9 +143,10 @@ const Header = () => {
             </label>
             <Button padding={"8px 16px"} br={"4px"} fontSize={"16px"}>
               <FaShoppingCart />
-              <div>
-                <p>0</p>
-                <p>P</p>
+              <div className='cartBtn'>
+                <p>{cart.length}</p>
+                <p>{allPrice}</p>
+                <p>₽</p>
               </div>
             </Button>
           </div>

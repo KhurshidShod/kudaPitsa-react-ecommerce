@@ -20,13 +20,15 @@
   --color-white: white;
   --bgcolor-white: white;
 }
-body.dark{
+
+body.dark {
   --bg-color: rgb(14, 14, 14);
   --fontColor-black: white;
   --bgcolor-white: rgb(28, 28, 28);
   --color-border: rgb(46, 46, 46);
 }
-main{
+
+main {
   background-color: var(--bg-color);
   font-family: 'Mulish';
 }
@@ -117,10 +119,45 @@ li {
   transition-duration: .5s;
   transform: rotate(180deg);
 }
+
 .activeCat {
   color: var(--color-red) !important;
   border-color: var(--color-red) !important;
 }
+
 .activeCat p {
   color: var(--color-red) !important;
+}
+
+.flyingImage {
+  position: absolute !important;
+  z-index: 9999999999 !important;
+  animation: fly_to_cart 1s ease-in-out;
+  border-radius: 50%;
+}
+
+@keyframes fly_to_cart {
+  0%, 20% {
+    left: 0;
+    top: 0;
+  }
+
+  45%,
+  50% {
+    left: calc(var(--left) + 40px);
+    top: 60px;
+  }
+
+  80%,
+  90% {
+    left: calc(var(--left) + 40px);
+    top: var(--top);
+    transform: scale(.1);
+  }
+
+  100% {
+    left: calc(var(--left) + 40px);
+    top: var(--top);
+    transform: scale(.1);
+  }
 }

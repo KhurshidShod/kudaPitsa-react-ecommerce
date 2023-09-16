@@ -11,9 +11,9 @@ const CartContextProvider = ({ children }) => {
   const state = {cart, setCart};
 
   return (
-    <CartContextProvider value={state}>
+    <CartContext.Provider value={state}>
       {children}
-    </CartContextProvider>
+    </CartContext.Provider>
   )
 }
 
