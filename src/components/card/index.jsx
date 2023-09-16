@@ -39,6 +39,7 @@ const Card = ({ prod }) => {
     flyingImg.classList.add('flyingImage')
     parent.appendChild(flyingImg)
     parent.style.position = 'relative'
+    parent.parentNode.parentNode.parentNode.style.overflow = 'hidden'
     
     const flyingImgPos = flyingImg.getBoundingClientRect()
     const cartBtnPos = document.querySelector('.cartBtn').getBoundingClientRect()
