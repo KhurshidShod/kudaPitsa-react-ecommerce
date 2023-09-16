@@ -144,27 +144,20 @@ header {
         gap: 0.5rem;
       }
       &.cartBtm {
-        button {
+        button{
           width: 56px;
           height: 56px;
           padding: 0 !important;
           border-radius: 50% !important;
           position: fixed !important;
-          right: 50px;
-          bottom: 50px;
-          @media (max-width: 570px) {
-            right: 20px;
-            bottom: 20px;
-          }
+          right: 20px !important;
+          bottom: 20px !important;
           gap: 0 !important;
           font-size: 24px !important;
           z-index: 9;
           cursor: pointer;
           div {
             p {
-              &:nth-child(2){
-                display: none;
-              }
               &:first-child {
                 position: absolute;
                 background-color: var(--bgcolor-white);
@@ -180,7 +173,10 @@ header {
                 border-radius: 50%;
                 color: var(--color-orange);
               }
-              &:last-child {
+              &:nth-child(2) {
+                display: none;
+              }
+              &:nth-child(3) {
                 display: none;
               }
             }
@@ -188,30 +184,31 @@ header {
         }
       }
       button {
-        p{
-          &:nth-child(1){
-            display: none;
-          }
-        }
         div {
           display: flex;
           gap: 3px;
+          p{
+            &:nth-child(1){
+              display: none;
+            }
+          }
         }
         @media (max-width: 550px) {
+          display: flex;
           width: 56px;
           height: 56px;
           padding: 0 !important;
           border-radius: 50% !important;
           position: fixed;
-          right: 20px;
-          bottom: 20px;
+          right: 20px !important;
+          bottom: 20px !important;
           gap: 0 !important;
           font-size: 24px !important;
           z-index: 9;
           cursor: pointer;
           div {
             p {
-              &:first-child {
+              &:nth-child(1) {
                 position: absolute;
                 background-color: var(--bgcolor-white);
                 width: 20px;
@@ -226,7 +223,10 @@ header {
                 border-radius: 50%;
                 color: var(--color-orange);
               }
-              &:last-child {
+              &:nth-child(3) {
+                display: none;
+              }
+              &:nth-child(2) {
                 display: none;
               }
             }
