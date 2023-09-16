@@ -27,7 +27,7 @@ const Card = ({ prod }) => {
     }
     setTimeout(() => {
       setCart(newProds);
-    }, 850);
+    }, 1250);
     localStorage.setItem("cart", JSON.stringify(newProds));
   };
   const addToCartAnimation = (e) => {
@@ -39,7 +39,6 @@ const Card = ({ prod }) => {
     flyingImg.classList.add('flyingImage')
     parent.appendChild(flyingImg)
     parent.style.position = 'relative'
-    parent.style.zIndex = '9999999'
     
     const flyingImgPos = flyingImg.getBoundingClientRect()
     const cartBtnPos = document.querySelector('.cartBtn').getBoundingClientRect()
@@ -54,7 +53,7 @@ const Card = ({ prod }) => {
     console.log(data.top)
     setTimeout(() => {
       flyingImg.style.display = 'none'
-    }, 1000);
+    }, 1500);
   }
   return (
     <div className={styles.category__wrapper_cards_card}>

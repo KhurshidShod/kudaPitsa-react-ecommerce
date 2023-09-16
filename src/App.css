@@ -131,13 +131,14 @@ li {
 
 .flyingImage {
   position: absolute !important;
-  z-index: 9999999999 !important;
-  animation: fly_to_cart 1s ease-in-out;
+  animation: fly_to_cart 1.5s ease-in-out;
   border-radius: 50%;
 }
 
 @keyframes fly_to_cart {
-  0%, 20% {
+
+  0%,
+  10% {
     left: 0;
     top: 0;
   }

@@ -162,7 +162,7 @@ export const products = [
     image: "/images/products/sushi/sushi-img-1.png",
     name: "Филадельфия кранч",
     description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...",
-    price: "475 ₽",
+    price: "475",
   },
   {
     id: "sushi-2",
@@ -171,7 +171,7 @@ export const products = [
     image: "/images/products/sushi/sushi-img-2.png",
     name: "Филадельфия крем-брюле",
     description: "Сливочный сыр, семга татаки с тростниковым сахаром, соус у...",
-    price: "395 ₽",
+    price: "395",
   },
   {
     id: "sushi-3",
@@ -180,7 +180,7 @@ export const products = [
     image: "/images/products/sushi/sushi-img-3.png",
     name: "Супер Филадельфия",
     description: "Действительно много семги, сливочный сыр, огурец, рис, н...",
-    price: "425 ₽",
+    price: "425",
   },
   {
     id: "sushi-4",
@@ -189,7 +189,7 @@ export const products = [
     image: "/images/products/sushi/sushi-img-4.png",
     name: "Тигр мама",
     description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-    price: "525 ₽",
+    price: "525",
   },
   {
     id: "sushi-5",
@@ -198,7 +198,7 @@ export const products = [
     image: "/images/products/sushi/sushi-img-5.png",
     name: "Тигр мама",
     description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-    price: "525 ₽",
+    price: "525",
   },
   {
     id: "sushi-6",
@@ -207,7 +207,7 @@ export const products = [
     image: "/images/products/sushi/sushi-img-6.png",
     name: "Супер Филадельфия",
     description: "Действительно много семги, сливочный сыр, огурец, рис, н...",
-    price: "425 ₽",
+    price: "425",
   },
   {
     id: "sushi-7",
@@ -216,7 +216,7 @@ export const products = [
     image: "/images/products/sushi/sushi-img-7.png",
     name: "Филадельфия кранч",
     description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...",
-    price: "475 ₽",
+    price: "475",
   },
   {
     id: "sushi-8",
@@ -225,7 +225,7 @@ export const products = [
     image: "/images/products/sushi/sushi-img-8.png",
     name: "Филадельфия крем-брюле",
     description: "Сливочный сыр, семга татаки с тростниковым сахаром, соус у...",
-    price: "395 ₽",
+    price: "395",
   },
   {
     id: "sauce-1",
@@ -235,7 +235,7 @@ export const products = [
     name: "Филадельфия кранч",
     description:
       "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...",
-    price: "475 ₽",
+    price: "475",
   },
   {
     id: "sauce-2",
@@ -245,7 +245,7 @@ export const products = [
     name: "Филадельфия крем-брюле",
     description:
       "Сливочный сыр, семга татаки с тростниковым сахаром, соус у...",
-    price: "395 ₽",
+    price: "395",
   },
   {
     id: "sauce-3",
@@ -254,7 +254,7 @@ export const products = [
     image: "/images/products/snacks/snack-img-3.png",
     name: "Супер Филадельфия",
     description: "Действительно много семги, сливочный сыр, огурец, рис, н...",
-    price: "425 ₽",
+    price: "425",
   },
   {
     id: "sauce-4",
@@ -263,7 +263,7 @@ export const products = [
     image: "/images/products/snacks/snack-img-4.png",
     name: "Тигр мама",
     description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-    price: "525 ₽",
+    price: "525",
   },
   {
     id: "sauce-5",
@@ -272,7 +272,7 @@ export const products = [
     image: "/images/products/snacks/snack-img-5.png",
     name: "Тигр мама",
     description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-    price: "525 ₽",
+    price: "525",
   },
   {
     id: "sauce-6",
@@ -281,7 +281,7 @@ export const products = [
     image: "/images/products/snacks/snack-img-6.png",
     name: "Супер Филадельфия",
     description: "Действительно много семги, сливочный сыр, огурец, рис, н...",
-    price: "425 ₽",
+    price: "425",
   },
   {
     id: "sauce-7",
@@ -291,7 +291,7 @@ export const products = [
     name: "Филадельфия крем-брюле",
     description:
       "Сливочный сыр, семга татаки с тростниковым сахаром, соус у...",
-    price: "395 ₽",
+    price: "395",
   },
   {
     id: "sauce-8",
@@ -301,7 +301,7 @@ export const products = [
     name: "Филадельфия кранч",
     description:
       "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...",
-    price: "475 ₽",
+    price: "475",
   },
   {
     id: "desert-1",

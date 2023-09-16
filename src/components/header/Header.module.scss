@@ -150,8 +150,12 @@ header {
           padding: 0 !important;
           border-radius: 50% !important;
           position: fixed !important;
-          right: 20px;
-          bottom: 20px;
+          right: 50px;
+          bottom: 50px;
+          @media (max-width: 570px) {
+            right: 20px;
+            bottom: 20px;
+          }
           gap: 0 !important;
           font-size: 24px !important;
           z-index: 9;

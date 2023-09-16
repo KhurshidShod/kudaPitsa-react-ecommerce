@@ -17,7 +17,7 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [cartFixed, setCartFixed] = useState(false);
   let allPrice = 0;
-  cart.map((el) => (allPrice += el.price * el.qty));
+  cart.map((el) => (allPrice += +el.price * +el.qty));
   const changeLang = (e) => {
     i18n.changeLanguage(e.target.value);
     localStorage.setItem("lang", e.target.value);
@@ -80,28 +80,28 @@ const Header = () => {
               </div>
               <ul>
                 <li>
-                  <a href="">Акции</a>
+                  <a href="">{t("Aksiya")}</a>
                 </li>
                 <li>
-                  <a href="">О компании</a>
+                  <a href="">{t("Haqida")}</a>
                 </li>
                 <li>
-                  <a href="">Пользовательское соглашение</a>
+                  <a href="">{t("PolSog")}</a>
                 </li>
                 <li>
-                  <a href="">Условия гарантии</a>
+                  <a href="">{t("Garantiya")}</a>
                 </li>
                 <li>
-                  <a href="">Ресторан</a>
+                  <a href="">{t("Restoran")}</a>
                 </li>
                 <li>
-                  <a href="">Контакты</a>
+                  <a href="">{t("Kontakt")}</a>
                 </li>
                 <li>
-                  <a href="">Поддержка</a>
+                  <a href="">{t("Paderjka")}</a>
                 </li>
                 <li>
-                  <a href="">Отследить заказ</a>
+                  <a href="">{t("Otsledit")}</a>
                 </li>
               </ul>
             </div>
@@ -145,7 +145,7 @@ const Header = () => {
               <FaShoppingCart />
               <div className='cartBtn'>
                 <p>{cart.length}</p>
-                <p>{allPrice}</p>
+                <p>{String(allPrice)}</p>
                 <p>₽</p>
               </div>
             </Button>
