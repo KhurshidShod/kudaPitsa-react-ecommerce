@@ -143,11 +143,11 @@ const Header = () => {
             </label>
             <Button padding={"8px 16px"} br={"4px"} fontSize={"16px"}>
               <FaShoppingCart />
-              <div className='cartBtn'>
+              <NavLink href="/cart" className='cartBtn'>
                 <p>{cart.length}</p>
                 <p>{String(allPrice)}</p>
                 <p>₽</p>
-              </div>
+              </NavLink>
             </Button>
           </div>
         </div>
