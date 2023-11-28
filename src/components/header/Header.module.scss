@@ -157,8 +157,12 @@ header {
           z-index: 90000;
           cursor: pointer;
           a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
             text-decoration: none;
-            color: white;
+            color: white !important;
             p {
               &:first-child {
                 position: absolute;
