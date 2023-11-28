@@ -190,9 +190,11 @@ header {
         }
       }
       button {
-        div {
+        a {
           display: flex;
           gap: 3px;
+          text-decoration: none;
+          color: white !important;
           p{
             &:nth-child(1){
               display: none;
